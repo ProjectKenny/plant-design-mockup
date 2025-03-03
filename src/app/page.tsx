@@ -1,101 +1,148 @@
-import Image from "next/image";
+import React from 'react';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <main className={styles.main}>
+      {/* Hero Section with Search Bar */}
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1>Discover Your Perfect Plants</h1>
+          <p>Find the right plants for your space and lifestyle</p>
+          
+          <div className={styles.searchContainer}>
+            <input 
+              type="text" 
+              placeholder="Search for plants, tools, or gardening tips..." 
+              className={styles.searchInput}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <button className={styles.searchButton}>
+              Search
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* 2-column with gardener and tools */}
+      <section className={styles.featuredSection}>
+        <div className={styles.columnContainer}>
+          <div className={styles.column}>
+            <div className={styles.gardenerCard}>
+              <div className={styles.gardenerImage}></div>
+              <h2>Expert Gardening Advice</h2>
+              <p>Our experienced gardeners provide personalized plant care tips and solutions for your garden needs.</p>
+              <button className={styles.primaryButton}>Consult an Expert</button>
+            </div>
+          </div>
+          
+          <div className={styles.column}>
+            <div className={styles.toolsCard}>
+              <div className={styles.toolsImage}></div>
+              <h2>Premium Gardening Tools</h2>
+              <p>Explore our collection of high-quality gardening tools designed for both beginners and professionals.</p>
+              <button className={styles.primaryButton}>Shop Tools</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* "Also seen on" section */}
+      <section className={styles.seenOnSection}>
+        <h3>As Seen On</h3>
+        <div className={styles.logoContainer}>
+          <div className={styles.logoItem}>Garden Today</div>
+          <div className={styles.logoItem}>Plant Life</div>
+          <div className={styles.logoItem}>Home & Garden</div>
+          <div className={styles.logoItem}>Green Thumb Weekly</div>
+        </div>
+      </section>
+
+      {/* 4 Bubbly icons with information */}
+      <section className={styles.infoSection}>
+        <div className={styles.infoContainer}>
+          <div className={styles.infoItem}>
+            <div className={styles.bubbleIcon}>🌱</div>
+            <h3>10,000+ Plants</h3>
+            <p>Extensive collection of indoor and outdoor plants for every space</p>
+          </div>
+          
+          <div className={styles.infoItem}>
+            <div className={styles.bubbleIcon}>🚚</div>
+            <h3>Fast Delivery</h3>
+            <p>Plants delivered to your doorstep within 3-5 business days</p>
+          </div>
+          
+          <div className={styles.infoItem}>
+            <div className={styles.bubbleIcon}>💧</div>
+            <h3>Care Guides</h3>
+            <p>Detailed care instructions for each plant in our collection</p>
+          </div>
+          
+          <div className={styles.infoItem}>
+            <div className={styles.bubbleIcon}>♻️</div>
+            <h3>Eco-Friendly</h3>
+            <p>Sustainable packaging and environmentally conscious practices</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup - Added as a necessity */}
+      <section className={styles.newsletterSection}>
+        <div className={styles.newsletterContainer}>
+          <h2>Join Our Plant Community</h2>
+          <p>Subscribe to receive gardening tips, exclusive offers, and plant care reminders</p>
+          <div className={styles.subscribeForm}>
+            <input 
+              type="email" 
+              placeholder="Enter your email address" 
+              className={styles.emailInput}
+            />
+            <button className={styles.subscribeButton}>Subscribe</button>
+          </div>
+        </div>
+      </section>
+
+      {/* 3-column footer */}
+      <footer className={styles.footer}>
+        <div className={styles.footerContainer}>
+          <div className={styles.footerColumn}>
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="/">Indoor Plants</a></li>
+              <li><a href="/">Outdoor Plants</a></li>
+              <li><a href="/">Plant Care Products</a></li>
+              <li><a href="/">Gardening Tools</a></li>
+              <li><a href="/">Plant Pots & Planters</a></li>
+            </ul>
+          </div>
+          
+          <div className={styles.footerColumn}>
+            <h3>Learn</h3>
+            <ul>
+              <li><a href="/">Plant Care Guides</a></li>
+              <li><a href="/">Gardening Blog</a></li>
+              <li><a href="/">Workshops & Events</a></li>
+              <li><a href="/">Plant Encyclopedia</a></li>
+              <li><a href="/">Plant Doctor Q&A</a></li>
+            </ul>
+          </div>
+          
+          <div className={styles.footerColumn}>
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="/about">Our Story</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/sustainability">Sustainability Commitment</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className={styles.copyright}>
+          <p>© 2025 PlantLife. All rights reserved.</p>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }

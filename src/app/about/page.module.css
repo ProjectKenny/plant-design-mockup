@@ -1,0 +1,263 @@
+.main {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--color-background-light);
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.heroContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+/* Our Story Section */
+.storySection {
+  margin: 80px 0;
+}
+
+.storyGrid {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.storyContent {
+  flex: 1;
+}
+
+.storyContent h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.storyContent p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.storyImage {
+  flex: 1;
+  height: 400px;
+  background-color: var(--color-accent-light);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.missionSection {
+  margin: 80px 0;
+}
+
+.missionBox {
+  background-color: var(--color-accent-light);
+  padding: 60px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.missionBox h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.missionBox p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Team Section */
+.teamSection {
+  margin: 80px 0;
+}
+
+.teamSection h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.memberPhoto {
+  width: 180px;
+  height: 180px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+}
+
+.teamMember h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: var(--color-primary-dark);
+}
+
+.memberTitle {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+/* Values Section */
+.valuesSection {
+  margin: 80px 0;
+}
+
+.valuesSection h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.valueCard {
+  background-color: var(--color-background-light);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.valueCard h3 {
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+/* CTA Section */
+.ctaSection {
+  margin: 80px 0;
+}
+
+.ctaBox {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 60px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ctaBox h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ctaBox p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background-color: white;
+  color: var(--color-primary);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  display: inline-block;
+}
+
+.primaryButton:hover {
+  background-color: var(--color-background-light);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: 2px solid white;
+  transition: background-color 0.2s;
+  display: inline-block;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .storyGrid {
+    flex-direction: column;
+  }
+  
+  .storyImage {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .missionBox {
+    padding: 40px 20px;
+  }
+  
+  .ctaBox {
+    padding: 40px 20px;
+  }
+}
